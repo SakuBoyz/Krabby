@@ -1,3 +1,7 @@
+use krabby::leetcode::ReverseInt;
+
 fn main() {
-    println!("Hello, world!");
+    let number = -000001001;
+    let result = ReverseInt::reverse(number);
+    println!("{}", result);
 }
