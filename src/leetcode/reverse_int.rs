@@ -18,3 +18,18 @@ impl ReverseInt {
         result
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_reverse() {
+        assert_eq!(ReverseInt::reverse(123), 321);
+        assert_eq!(ReverseInt::reverse(-123), -321);
+        assert_eq!(ReverseInt::reverse(120), 21);
+        assert_eq!(ReverseInt::reverse(0), 0);
+        assert_eq!(ReverseInt::reverse(1534236469), 0); // Overflow case
+        assert_eq!(ReverseInt::reverse(-2147483648), 0); // Underflow case
+    }
+}
